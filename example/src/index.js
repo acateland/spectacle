@@ -25,7 +25,11 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#ff4081"
+  primary: "white",
+  secondary: "#266092",
+  tertiary: "#C3D600",
+  quartenary: " #3DB0D6",
+  black: "#666666"
 });
 
 export default class Presentation extends React.Component {
@@ -34,26 +38,114 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Spectacle
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              Picture of malta
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              React
             </Heading>
             <Heading size={1} fit caps>
-              A ReactJS Presentation Library
+              A Quick journey
             </Heading>
-            <Heading size={1} fit caps textColor="black">
-              Where You Can Write Your Decks In JSX
-            </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">View on Github</Text>
-            </Link>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
+              What is a SPA ?
             </Heading>
           </Slide>
+          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+            <List>
+              <Appear><ListItem>Simple scripting</ListItem></Appear>
+              <Appear><ListItem>Jquery mess</ListItem></Appear>
+              <Appear><ListItem>More developpers take interest in JS</ListItem></Appear>
+              <Appear><ListItem>First frameworks (backbone, ember)</ListItem></Appear>
+              <Appear><ListItem>New generation (Angular)</ListItem></Appear>
+              <Appear><ListItem>React (not a framework)</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="primary">
+            <Layout>
+              <Fill>
+                <Interactive/>
+              </Fill>
+              <Fill>
+                <CodePane lang="jsx" source={require("raw!../assets/react.example")} margin="20px"/>
+              </Fill>
+            </Layout>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+            <Heading size={2} caps fit textColor="primary" textFont="primary">
+              React is a library managing components
+            </Heading>
+            <List textColor="primary">
+              <Appear><ListItem>Not a framework</ListItem></Appear>
+              <Appear><ListItem>No dependency injection</ListItem></Appear>
+              <Appear><ListItem>No "Ajax" handling</ListItem></Appear>
+              <Appear><ListItem>No premade super components</ListItem></Appear>
+              <Appear><ListItem>Not a template engine</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              React benefits
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              Hidding dom manipulation
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              JSX a simple abstraction
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              Virtual DOM
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              React App Data flow
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              Predictability
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              Developper experience
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              React is not only for HTML
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              React native, learn once apply everywhere
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              React is not only for UI
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              Questions ?
+            </Heading>
+          </Slide>
+
+          
+
+          
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane
               lang="jsx"
@@ -131,12 +223,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               <Appear><ListItem>And...</ListItem></Appear>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
-          </Slide>
+
           <Slide transition={["slide"]} bgColor="primary"
             notes="Hard to find cities without any pizza"
           >
