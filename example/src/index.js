@@ -58,7 +58,7 @@ export default class Presentation extends React.Component {
               <Heading size={1} caps lineHeight={1} textColor="primary" style={coverStyle.title}>
                 React
               </Heading>
-              <Image src={images.logo} width="300px" style={coverStyle.logo}></Image>
+              <Image src={images.logo} width="300px" style={coverStyle.logo} />
             </Slide>
 
             <Slide transition={["zoom"]} bgColor="primary">
@@ -106,7 +106,7 @@ export default class Presentation extends React.Component {
                 <Appear><ListItem>Not a framework</ListItem></Appear>
                 <Appear><ListItem>No dependency injection</ListItem></Appear>
                 <Appear><ListItem>No "Ajax" handling</ListItem></Appear>
-                <Appear><ListItem>No premade super components</ListItem></Appear>
+                <Appear><ListItem>No pre-made super components</ListItem></Appear>
                 <Appear><ListItem>Not a template engine</ListItem></Appear>
               </List>
             </Slide>
@@ -119,7 +119,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={["zoom"]} bgColor="primary" notes="No ghost node with event handler attached etc">
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-                Hidding dom manipulation
+                Hiding dom manipulation
               </Heading>
               <Appear>
                 <CodePane lang="js" source={require("raw!../assets/vanilla.example")} margin="20px"/>
