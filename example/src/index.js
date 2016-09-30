@@ -19,7 +19,9 @@ const images = {
   city: require("../assets/malta.png"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/talend.png"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  acateland: require("../assets/acateland.png"),
+  jsomsanith: require("../assets/jsomsanith.png")
 };
 
 preloader(images);
@@ -49,6 +51,12 @@ const coverStyle = {
   }
 };
 
+const avatarStyle = {
+  margin: '0 50px',
+  borderRadius: '50%',
+  border: '1px SOLID black'
+};
+
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -62,12 +70,12 @@ export default class Presentation extends React.Component {
             </Slide>
 
             <Slide transition={["zoom"]} bgColor="primary">
-              <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-                React
-              </Heading>
-              <Heading size={1} fit caps>
-                A Quick journey
-              </Heading>
+              <Layout>
+                <Fill>
+                  <Image src={images.acateland} width="300px" style={avatarStyle} />
+                  <Image src={images.jsomsanith} width="300px" style={avatarStyle} />
+                </Fill>
+              </Layout>
             </Slide>
 
             <Slide transition={["slide"]} bgColor="black" notes="Explanation on next slides">
