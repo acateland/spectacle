@@ -21,7 +21,8 @@ const images = {
   logo: require("../assets/talend.png"),
   markdown: require("../assets/markdown.png"),
   acateland: require("../assets/acateland.png"),
-  jsomsanith: require("../assets/jsomsanith.png")
+  jsomsanith: require("../assets/jsomsanith.png"),
+  flow: require("../assets/flow.png")
 };
 
 preloader(images);
@@ -168,9 +169,7 @@ export default class Presentation extends React.Component {
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                 React App Data flow
               </Heading>
-              <Heading>
-                Need a Schema
-              </Heading>
+              <Image src={images.flow} />
             </Slide>
 
             <Slide transition={["zoom"]} bgColor="primary">
