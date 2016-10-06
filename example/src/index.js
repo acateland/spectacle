@@ -22,7 +22,8 @@ const images = {
   markdown: require("../assets/markdown.png"),
   acateland: require("../assets/acateland.png"),
   jsomsanith: require("../assets/jsomsanith.png"),
-  flow: require("../assets/flow.png")
+  flow: require("../assets/flow.png"),
+  developers: require("../assets/developers.jpg")
 };
 
 preloader(images);
@@ -79,6 +80,10 @@ export default class Presentation extends React.Component {
               </Layout>
             </Slide>
 
+            <Slide transition={["zoom"]} bgColor="primary">
+              <Image src={images.developers}/>
+            </Slide>
+
             <Slide transition={["slide"]} bgColor="black" notes="Explanation on next slides">
               <Heading size={2} caps fit textColor="primary" textFont="primary">
                 What is a SPA ?
@@ -126,7 +131,7 @@ export default class Presentation extends React.Component {
               </Heading>
             </Slide>
 
-            <Slide transition={["zoom"]} bgColor="primary" notes="No ghost node with event handler attached etc">
+            <Slide transition={["zoom"]} bgColor="primary" notes="Error prone, easy to have a memory leaks">
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                 Hiding dom manipulation
               </Heading>
@@ -135,7 +140,7 @@ export default class Presentation extends React.Component {
               </Appear>
             </Slide>
 
-            <Slide transition={["zoom"]} bgColor="primary" notes="everything is a component, tag are easy to read and to nest, business logic next to representation is good, if component to complex split ">
+            <Slide transition={["zoom"]} bgColor="primary" notes="Everything is a component, tag are easy to read and to nest, business logic next to representation is good, if component to complex split ">
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                 JSX a simple abstraction
               </Heading>
@@ -144,7 +149,7 @@ export default class Presentation extends React.Component {
               </Appear>
             </Slide>
 
-            <Slide transition={["zoom"]} bgColor="primary" notes="Dom is slow, cause layout reflow, repaint etc, virtual dom = performances by default batch and change detection !">
+            <Slide transition={["zoom"]} bgColor="primary" notes="Dom is slow, cause layout reflow, repaint. Virtual dom = no access to the DOM, fast change detection and batch of minimal DOM manipulation !">
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                 Virtual DOM
               </Heading>
@@ -165,14 +170,14 @@ export default class Presentation extends React.Component {
               </List>
             </Slide>
 
-            <Slide transition={["zoom"]} bgColor="primary">
+            <Slide transition={["zoom"]} bgColor="primary" notes="Data flows down the component tree. (Input) One way data binding : parent --> children; (output) event callbacks child --> parent. No 2-way data-binding : cause performance pb, harder to understand what is going on">
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                 React App Data flow
               </Heading>
               <Image src={images.flow} />
             </Slide>
 
-            <Slide transition={["zoom"]} bgColor="primary">
+            <Slide transition={["zoom"]} bgColor="primary" notes="React restrict where data comes from : state and props. Focus on how comp looks like and behave based on that">
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                 Predictability
               </Heading>
