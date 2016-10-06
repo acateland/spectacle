@@ -27,6 +27,10 @@ const images = {
   predictability: require("../assets/predictability.jpg")
 };
 
+const videos = {
+  rdubois: require("file!../assets/rdubois.mp4")
+};
+
 preloader(images);
 
 const theme = createTheme({
@@ -220,6 +224,7 @@ export default class Presentation extends React.Component {
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                 Questions ?
               </Heading>
+              <video src={videos.rdubois} style={{height: '70vh'}} autoPlay/>
             </Slide>
           </Deck>
         </Spectacle>
