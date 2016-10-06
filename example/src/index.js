@@ -23,7 +23,8 @@ const images = {
   acateland: require("../assets/acateland.png"),
   jsomsanith: require("../assets/jsomsanith.png"),
   flow: require("../assets/flow.png"),
-  developers: require("../assets/developers.jpg")
+  developers: require("../assets/developers.jpg"),
+  predictability: require("../assets/predictability.jpg")
 };
 
 preloader(images);
@@ -181,6 +182,7 @@ export default class Presentation extends React.Component {
               <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                 Predictability
               </Heading>
+              <Image src={images.predictability} width="600px" />
             </Slide>
 
             <Slide transition={["zoom"]} bgColor="primary" notes="show the chrome debug pannel">
